@@ -79,8 +79,8 @@ h3 {
 
 .container {
   width: 1158px;
-  margin: auto;
-  padding: 0 15px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 /* header */
@@ -791,12 +791,20 @@ address {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
   .container {
     max-width: 320px;
+    width: auto;
   }
 
-  .nav {
-    padding: 16px 17px;
+  .logo {
+    padding: 16px 0;
+    margin: 0;
   }
 
   .nav-menu {
@@ -930,6 +938,11 @@ address {
     align-items: center;
   }
 
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 72px;
+    line-height: 1.1;
+  }
   .portfolio-list {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -938,12 +951,19 @@ address {
   .project-list {
     width: 100%;
   }
+  .about-section,
+  .team-section,
+  .portfolio-section {
+    padding: 96px 0;
+    gap: 72px;
+  }
+
   .about-list .icon {
     display: none;
   }
 
-  .about-list:not(:last-child) {
-    margin-bottom: 72px;
+  .about-list {
+    font-weight: 500;
   }
 
   .about-card .section-subtitle {
@@ -958,6 +978,10 @@ address {
 
   .portfolio-list img {
     width: 100%;
+  }
+
+  .footer {
+    padding: 96px 0;
   }
 
   .footer .container {
@@ -980,6 +1004,7 @@ address {
 
   .subscribe-form {
     flex-direction: column;
+    align-items: center;
   }
 
   .modal {
@@ -998,6 +1023,14 @@ address {
     width: 768px;
   }
 
+  .logo {
+    margin-right: 120px;
+  }
+
+  .about-list {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
   .about-list .icon {
     display: none;
   }
@@ -1006,6 +1039,7 @@ address {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 72px 24px;
   }
 
   .about-card .section-subtitle {
@@ -1027,6 +1061,20 @@ address {
     flex: 1 1 calc(50% - 20px);
   }
 
+  .portfolio-list {
+    gap: 72px 24px;
+  }
+  .team-list {
+    gap: 64px 24px;
+  }
+
+  .about-section,
+  .team-section,
+  .portfolio-section {
+    padding: 96px 0;
+    gap: 72px;
+  }
+
   .portfolio-list img {
     width: 100%;
   }
@@ -1035,6 +1083,7 @@ address {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding-left: 108px;
   }
 
   .footer-description,
@@ -1055,5 +1104,16 @@ address {
 
   .address-link {
     font-size: 12px;
+  }
+
+  .footer-content {
+    margin-right: 24px;
+  }
+}
+
+@media (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7) url(../images/bg-image-2x.jpg);
   }
 }
