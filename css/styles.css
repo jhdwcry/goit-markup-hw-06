@@ -788,6 +788,10 @@ address {
   .mobile-menu-btn {
     display: none;
   }
+
+  .mobile-hero-btn{
+    display: none;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -804,9 +808,13 @@ address {
 
   .logo {
     padding: 16px 0;
-    margin: 0;
+    margin-right: 150px;
   }
 
+  .mobile-hero-btn{
+    background-color: transparent;
+    border: none;
+  }
   .nav-menu {
     display: none;
   }
